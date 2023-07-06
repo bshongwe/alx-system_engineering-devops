@@ -162,25 +162,7 @@ Repo:
 
 # Tasks 13
 Create a script that creates a directory called my_dir with permissions 751 in the working directory.
-
-julien@ubuntu:/tmp/h$ ls -l
-total 20
--rwxrwxr-x 1 julien julien   39 Sep 20 14:59 12-directory_permissions
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir0
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir1
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir2
--rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
-julien@ubuntu:/tmp/h$ ./12-directory_permission s
-julien@ubuntu:/tmp/h$ ls -l
-total 24
--rwxrwxr-x 1 julien julien   39 Sep 20 14:59 12-directory_permissions
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir0
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir1
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir2
-drwxr-x--x 2 julien julien 4096 Sep 20 14:59 my_dir
--rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
-julien@ubuntu:/tmp/h$ 
-
+ 
 Repo:
 
     GitHub repository: alx-system_engineering-devops
@@ -194,25 +176,6 @@ Write a script that changes the group owner to school for the file hello
 
     The file hello will be in the working directory
 
-julien@ubuntu:/tmp/h$ ls -l
-total 24
--rwxrwxr-x 1 julien julien   34 Sep 20 15:03 13-change_group
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir0
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir1
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir2
-drwxr-x--x 2 julien julien 4096 Sep 20 14:59 my_dir
--rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
-julien@ubuntu:/tmp/h$ sudo ./13-change_group 
-julien@ubuntu:/tmp/h$ ls -l
-total 24
--rwxrwxr-x 1 julien julien      34 Sep 20 15:03 13-change_group
-drwx--x--x 2 julien julien    4096 Sep 20 14:49 dir0
-drwx--x--x 2 julien julien    4096 Sep 20 14:49 dir1
-drwx--x--x 2 julien julien    4096 Sep 20 14:49 dir2
-drwxr-x--x 2 julien julien    4096 Sep 20 14:59 my_dir
--rw-rw-r-- 1 julien school   23 Sep 20 14:25 hello
-julien@ubuntu:/tmp/h$ 
-
 Repo:
 
     GitHub repository: alx-system_engineering-devops
@@ -223,25 +186,6 @@ Repo:
 
 # Task 15
 Write a script that changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
-
-julien@ubuntu:/tmp/h$ ls -l
-total 24
--rwxrwxr-x 1 julien julien   36 Sep 20 15:06 100-change_owner_and_group
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir0
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir1
-drwx--x--x 2 julien julien 4096 Sep 20 14:49 dir2
-drwxr-x--x 2 julien julien 4096 Sep 20 14:59 my_dir
--rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
-julien@ubuntu:/tmp/h$ sudo ./100-change_owner_and_group 
-julien@ubuntu:/tmp/h$ ls -l
-total 24
--rwxrwxr-x 1 vincent staff   36 Sep 20 15:06 100-change_owner_and_group
-drwx--x--x 2 vincent staff 4096 Sep 20 14:49 dir0
-drwx--x--x 2 vincent staff 4096 Sep 20 14:49 dir1
-drwx--x--x 2 vincent staff 4096 Sep 20 14:49 dir2
-drwxr-x--x 2 vincent staff 4096 Sep 20 14:59 my_dir
--rw-rw-r-- 1 vincent staff   23 Sep 20 14:25 hello
-julien@ubuntu:/tmp/h$ 
 
 Repo:
 
@@ -256,19 +200,6 @@ Write a script that changes the owner and the group owner of _hello to vincent a
 
     The file _hello is in the working directory
     The file _hello is a symbolic link
-
-julien@ubuntu:/tmp/h$ ls -l
-total 24
--rwxrwxr-x 1 julien julien   44 Sep 20 15:12 101-symbolic_link_permissions
--rw-rw-r-- 1 julien julien   23 Sep 20 14:25 hello
-lrwxrwxrwx 1 julien julien    5 Sep 20 15:10 _hello -> hello
-julien@ubuntu:/tmp/h$ sudo ./101-symbolic_link_permissions 
-julien@ubuntu:/tmp/h$ ls -l
-total 24
--rwxrwxr-x 1 julien julien      44 Sep 20 15:12 101-symbolic_link_permissions
--rw-rw-r-- 1 julien julien      23 Sep 20 14:25 hello
-lrwxrwxrwx 1 vincent  staff    5 Sep 20 15:10 _hello -> hello
-julien@ubuntu:/tmp/h$ 
 
 Repo:
 
