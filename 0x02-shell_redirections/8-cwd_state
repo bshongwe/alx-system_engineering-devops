@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -al > 8-cwd_state
