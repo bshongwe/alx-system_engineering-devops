@@ -112,11 +112,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 # System Engineering DevOps Projects
 ## Bash
-### 0x00. Shell: Basics
-
-### 0x01. Shell: Permissions
-
-### 0x02. Shell: I/O Redirections and Filters
-
-### 0x03. Shell: Init Files, Variables and Expansions
+    0x00. Shell: Basics
+    0x01. Shell: Permissions
+    0x02. Shell: I/O Redirections and Filters
+    0x03. Shell: Init Files, Variables and Expansions
 
