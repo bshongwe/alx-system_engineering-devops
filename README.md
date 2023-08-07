@@ -1,4 +1,4 @@
-# Alx-system Engineering DevOps
+# Alx System Engineering DevOps
 
 ## About Bash projects
 
