@@ -28,6 +28,7 @@ DISCLAIMER: you will probably see Authentication failed: Bad username / password
 <img src="Attack is the best defense_project image.png" />
 
 Repo:
+
     GitHub repository: alx-system_engineering-devops
     Directory: attack_is_the_best_defense
     File: 0-sniffing
@@ -46,6 +47,7 @@ Password-based authentication systems can be easily broken by using a dictionary
 -  Once you found the password, share it in your answer file.
 
 Repo:
+
     GitHub repository: alx-system_engineering-devops
     Directory: attack_is_the_best_defense
     File: 1-dictionary_attack
