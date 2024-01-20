@@ -1,4 +1,4 @@
-#!/usr/bin/pup
+#!/usr/bin/puppet
 # Install from specific Python version
 package { 'python':
  ensure => '3.8.10',
