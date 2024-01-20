@@ -1,13 +1,8 @@
 #!/usr/bin/pup
 # Install a specific version of flask (2.1.0)
-class { 'python':
-  pip_provider => 'pip3',
-}
-
-python::pip { 'flask':
+packge { 'Flask':
   ensure => '2.1.0',
-  pkgname => 'flask',
-  pip_provider => 'pip3',
+  provider => 'pip3',
 }
 
 # Install Wekzeug v2.1.1
