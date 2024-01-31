@@ -1,4 +1,6 @@
 # 0x0E. Web stack debugging #1
+<img src="Web Debugging_1.jpg" />
+
 # Requirements
 ## General
 -  Allowed editors: vi, vim, emacs
