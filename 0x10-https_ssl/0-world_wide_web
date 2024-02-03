@@ -4,7 +4,7 @@
 print_domain_subdomain () {
     local domain="$1"
     local subdomain="$2"
-    local record_type="A"  # Assuming A records for simplicity
+    local record_type="A"
     local destination
 
     destination=$(dig "$subdomain.$domain" | awk '/^'"$subdomain"'/ {print $NF}')
