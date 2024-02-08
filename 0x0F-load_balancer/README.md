@@ -81,3 +81,7 @@ Repo:
     Directory: 0x0F-load_balancer
     File: 2-puppet_custom_http_response_header.pp
 
+
+
+The GIF below is the visualisation of what this project is all about - setting up the HAproxy (Load Balancer) so that it functions in the manner illustrated... and this should also emphasise the importance of a functioning HAproxy
+<img src="HAproxy-and-2-server-setup.gif" />
