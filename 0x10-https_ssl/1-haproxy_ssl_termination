@@ -33,19 +33,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend www.ernestshong.tech-frontend
+frontend ernestshong.tech-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
         default_backend bshongwe-backend
 
-frontend www.ernestshong.tech-frontend-https
+frontend ernestshong.tech-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/bshongwe.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend bshongwe-backend
 
-backend www.ernestshong.tech-backend
+backend ernestshong.tech-backend
         balance roundrobin
         server 484993-web-01 54.236.46.92:80 check
         server 484993-web-02 54.210.93.3:80 check
