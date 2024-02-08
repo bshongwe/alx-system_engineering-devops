@@ -33,17 +33,17 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend ernestshong.tech-frontend
+frontend ernestshong-tech-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend bshongwe-backend
+        default_backend ernestshong-tech-backend
 
-frontend ernestshong.tech-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/bshongwe.tech.pem
+frontend ernestshong-tech-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/ernestshong.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend bshongwe-backend
+        default_backend ernestshong-tech-backend
 
 backend ernestshong.tech-backend
         balance roundrobin
