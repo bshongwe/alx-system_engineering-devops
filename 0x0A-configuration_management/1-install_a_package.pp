@@ -1,8 +1,8 @@
 #!/usr/bin/puppet
 # Install from specific Python version
 package { 'python':
- ensure => '3.8.10',
- provider => 'pip3',
+  ensure => '3.8.10',
+  provider => 'pip3',
 }
 # Install a specific version of flask (2.1.0)
 package { 'Flask':
