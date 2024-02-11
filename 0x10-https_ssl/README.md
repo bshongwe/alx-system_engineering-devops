@@ -110,8 +110,8 @@ Repo:
     File: 100-redirect_http_to_https
 
 
+<br></br>
 ## Setting up your SSL:
-
 <br></br>
 <img align="left" alt="C" style="padding-right;" src="ssl.gif">
 
