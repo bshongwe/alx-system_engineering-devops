@@ -110,6 +110,9 @@ Repo:
     File: 100-redirect_http_to_https
 
 
+## Setting up your SSL:
+
+<br></br>
 <img align="left" alt="C" style="padding-right;" src="ssl.gif">
 
 <br></br>
@@ -125,7 +128,6 @@ Repo:
 <br></br>
 <br></br>
 
-## Setting up your SSL:
 Note that you must know how to use these before you can start. Ensure that
 Nginx has been installed in your primary server, secondary server, as well
 as the load balancer (HAproxy) before you begin
