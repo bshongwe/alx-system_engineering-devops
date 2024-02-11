@@ -1,4 +1,5 @@
 # 0x10 https ssl
+<img align="left" alt="C" style="padding-right;" src="ssl.gif">
 
 ## Settinng up your SSL:
 Note that you must know how to use these before you can start. Ensure that
