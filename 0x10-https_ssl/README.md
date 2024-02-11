@@ -1,10 +1,6 @@
 # 0x10 https ssl
+
 <img align="left" alt="C" style="padding-right;" src="https.png">
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
 
 ## General
 -    What is HTTPS SSL 2 main roles
