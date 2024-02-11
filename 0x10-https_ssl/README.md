@@ -1,7 +1,22 @@
 # 0x10 https ssl
 <img align="left" alt="C" style="padding-right;" src="ssl.gif">
 
-## Settinng up your SSL:
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+
+## Setting up your SSL:
 Note that you must know how to use these before you can start. Ensure that
 Nginx has been installed in your primary server, secondary server, as well
 as the load balancer (HAproxy) before you begin
