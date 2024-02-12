@@ -1,4 +1,6 @@
 # 0x07. Networking basics #0
+<img src="OSI Model.png">
+
 ## OSI Model
 -  What it is
 -  How many layers it has
@@ -7,6 +9,8 @@
 ## What is a LAN
 -  Typical usage
 -  Typical geographical size
+
+<img src="OSI model_2.gif">
 
 ## What is a WAN
 -  Typical usage
@@ -25,6 +29,8 @@
 -  What is a port
 -  Memorize SSH, HTTP and HTTPS port numbers
 -  What tool/protocol is often used to check if a device is connected to a network
+<img src="OSI model_2-2.gif">
+
 
 ## More Info
 The second line of all your Bash scripts should be a comment explaining what is the script doing
@@ -134,7 +140,7 @@ Repo:
 ## 3. UDP and TCP
 mandatory
 
-<img src="">
+<img src="task-3_0x07-networking-basics.jpg">
 
 Let’s fill the empty parts in the drawing above.
 
@@ -219,5 +225,10 @@ Repo:
     GitHub repository: alx-system_engineering-devops
     Directory: 0x07-networking_basics
     File: 5-is_the_host_on_the_network
+
+<br></br>
+## Illustration that summarises the OSI model in networking
+<br></br>
+<img src="OSI model.gif">
 
 
