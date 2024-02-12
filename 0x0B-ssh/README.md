@@ -27,6 +27,16 @@ Note: Your server is configured with an Ubuntu 20.04 LTS environment.
 -  The second line of all your Bash scripts should be a comment explaining what is the script doing
 
 <img align="left" alt="C" style="padding-right;" src="tux_ssh.jpg">
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
 
 # Tasks
 ## 0. Use a private key
@@ -101,6 +111,7 @@ Now that you have successfully connected to your server, we would also like to j
 Add the SSH public key below to your server so that we can connect using the ubuntu user.
 
 <code>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNdtrNGtTXe5Tp1EJQop8mOSAuRGLjJ6DW4PqX4wId/Kawz35ESampIqHSOTJmbQ8UlxdJuk0gAXKk3Ncle4safGYqM/VeDK3LN5iAJxf4kcaxNtS3eVxWBE5iF3FbIjOqwxw5Lf5sRa5yXxA8HfWidhbIG5TqKL922hPgsCGABIrXRlfZYeC0FEuPWdr6smOElSVvIXthRWp9cr685KdCI+COxlj1RdVsvIo+zunmLACF9PYdjB2s96Fn0ocD3c5SGLvDOFCyvDojSAOyE70ebIElnskKsDTGwfT4P6jh9OBzTyQEIS2jOaE5RQq4IB4DsMhvbjDSQrP0MdCLgwkN</code>
+
 Repo:
 
     GitHub repository: alx-system_engineering-devops
@@ -125,3 +136,7 @@ Repo:
     Directory: 0x0B-ssh
     File: 100-puppet_ssh_config.pp
 
+<br></br>
+If you followed the expected instruction, then your SSH connection should work as expected...
+<br></br>
+<img align="left" alt="C" style="padding-right;" src="ssh-client-and-server.jpg">
