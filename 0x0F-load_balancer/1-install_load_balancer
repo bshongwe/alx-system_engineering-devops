@@ -41,7 +41,7 @@ frontend ernestshong-tech-frontend
 backend ernestshong-tech-backend
     balance roundrobin
     server 484993-web-01 54.236.46.92:80 check
-    server 484993-web-02 54.210.93.3:80 check
+    server 484993-web-02 54.160.85.222:80 check
 "
 
 # shellcheck disable=SC2154
