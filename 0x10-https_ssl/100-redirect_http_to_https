@@ -41,9 +41,9 @@ frontend ernestshong-tech-frontend
         default_backend ernestshong-tech-backend
 
 frontend ernestshong-tech-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/ernestshong.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.ernestshong.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend ernestshong-backend
+        default_backend ernestshong-tech-backend
 
 backend ernestshong.tech-backend
         balance roundrobin
