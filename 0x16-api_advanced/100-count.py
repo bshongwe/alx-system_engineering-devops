@@ -17,7 +17,7 @@ def count_words(subreddit, word_list, after=None, word_dict=None):
             print(f"{word.lower()}: {count}")
         return
 
-    url = f"https://www.reddit.com/r/{subreddit}/hot/.json"
+    url = f"https://www.reddit.com/r/subreddit/hot/.json"
     headers = {"User-Agent": "python:reddit_keyword_counter:v1.0 (by /u/ernest_b_shong)"}
     params = {"limit": 100, "after": after}
     response = requests.get(url, headers=headers, params=params, allow_redirects=False)
