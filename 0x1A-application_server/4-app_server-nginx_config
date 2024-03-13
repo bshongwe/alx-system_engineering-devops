@@ -1,0 +1,52 @@
+# Configures Nginx to serve AirBnB_clone_v3 API using port 80
+# /api/ points to a Gunicorn instance listening on port 5002
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    # Serve static files from /data/web_static/current/ under /hbnb_static route
+    location /hbnb_static {
+        alias /data/web_static/current/;
+    }
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    
+    # Server name
+    server_name 54.236.46.92;
+
+    # Custom header
+    add_header X-Served-By 484993-web-01;
+
+    # Default location block for other requests
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Proxy requests to /airbnb-onepage to the process listening on port 5000
+    location /airbnb-onepage {
+        proxy_pass http://0.0.0.0:5000/airbnb-onepage;
+    }
+
+    # Proxy requests to /airbnb-dynamic/number_odd_or_even/ to process on port 5001
+    location ~ ^/airbnb-dynamic/number_odd_or_even/([0-9]+)$ {
+        proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;
+    }
+
+    # Proxy requests to /api/ to process on port 5002
+    location /api/ {
+        proxy_pass http://0.0.0.0:5002;
+    }
+
+    # Redirect request containing 'redirect_me' to a specific URL
+    if ($request_uri ~* ^/redirect_me) {
+        rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
+    }
+
+    # Custom 404 error page
+    error_page 404 /error_404.html;
+    location = /error_404.html {
+        internal;
+    }
+}
