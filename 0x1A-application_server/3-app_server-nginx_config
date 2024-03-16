@@ -1,49 +1,41 @@
-# Configures Nginx to serve the /number_odd_or_even/ route on AirBnB_clone_v2
-# serving on port 80
+# Configures Nginx to serve the route /airbnb-onepage/ from AirBnB_clone_v2
+# running on port 5000
 
 server {
-    listen 80 default_server;
+    listen 80;
     listen [::]:80 default_server;
-
-    # Root directory for static files
+    # Customised HTTP response header
+    add_header X-Served-By 484993-web-01;
     root /var/www/html;
-    index index.html index.htm index.nginx-debian.html;
+    index index.html index.htm;
 
-    # Server name
+    # Use IP of server as domain name
     server_name 54.236.46.92;
 
-    # Custom header
-    add_header X-Served-By 484993-web-01;
+    # Serve /airbnb-onepage/ route from AirBnB_clone_v2
+    location /airbnb-onepage/ {
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    }
 
-    # Serve static files from /data/web_static/current/ under /hbnb_static route
+    # Serve /airbnb-onepage/ route from AirBnB_clone_v2
+    location /airbnb-onepage/airbnb-dynamic/number_odd_or_even/([0-9]+)$ {
+        proxy_pass http://127.0.0.1:5001/airbnb-onepage/airbnb-dynamic/number_odd_or_even/$1;
+    }
+
+    # Serve static files for /hbnb_static route
     location /hbnb_static {
         alias /data/web_static/current/;
     }
 
-    # Default location block for other requests
-    location / {
-        try_files $uri $uri/ =404;
-    }
-
-    # Proxy requests to /airbnb-onepage to the process listening on port 5000
-    location /airbnb-onepage {
-        proxy_pass http://0.0.0.0:5000/airbnb-onepage;
-    }
-
-    # Proxy requests to /airbnb-dynamic/number_odd_or_even/ to process on port 5001
-    location ~ ^/airbnb-dynamic/number_odd_or_even/([0-9]+)$ {
-        proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;
-    }
-
-    # Redirect request containing 'redirect_me' to a specific URL
-    if ($request_uri ~* ^/redirect_me) {
-        rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
-    }
-
-    # Custom 404 error page
-    error_page 404 /error_404.html;
-
-    location = /error_404.html {
+    # 404 error page
+    error_page 404 /404.html;
+    location /404 {
+        root /var/www/html;
         internal;
+    }
+
+    # Redirect route
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
     }
 }
